@@ -1,0 +1,767 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/afraz/ontologies/2023/11/untitled-ontology-12#"
+     xml:base="http://www.semanticweb.org/afraz/ontologies/2023/11/untitled-ontology-12"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:JavaScript="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript">
+        <rdfs:comment xml:lang="en">A JavaScript programming domain Intelligent Tutoring System&apos;s ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ontology of JavaScript ITS</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#belongsToLearningPath -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#belongsToLearningPath">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningPath"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shows the path of learning that a learning resource is a part of.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#completes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#completes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shows that a user has finished a particular learning material</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#coversSkillLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#coversSkillLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#SkillLevel"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basically, this tells you what level of skill a learning resource is meant for.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#hasFeedback -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#hasFeedback">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Assessment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Feedback"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates assessments to feedback.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#hasPrerequisite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#hasPrerequisite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shows the connection between topics that need to be learned before moving on to next topic</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#hasUserFeedback -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#hasUserFeedback">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Assessment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Feedback"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This links assessments and exercises to feedback provided to users.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#tracksProgress -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#tracksProgress">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keeps tabs on how a user is doing as they go through learning materials and finish them.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#usesInteractiveTool -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#usesInteractiveTool">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveTool"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifies the interactive tool used by a learning resource</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#answer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#answer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Assessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provides the accurate response for an evaluation.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#content -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#content">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Feedback"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is all about what the feedback is</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#label -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#label">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Represents the display label or name of the topic</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#levelName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#levelName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#SkillLevel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The skill level is indicated by the name (e.g., Beginner, Intermediate and  Advanced).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#pathName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#pathName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningPath"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The learning path is identified by its name or identifier.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#question -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#question">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Assessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The question or prompt for an assessment is indicated.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#title">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The learning resource is indicated by the title or name.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#toolName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#toolName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveTool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The interactive tool&apos;s name or type is represented (e.g., &quot;Code Editor,&quot; &quot;Chatbot&quot;).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#url -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#url">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gives the web address or hyperlink to the learning resources.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#username -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#username">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Represents the unique username or identifier for a user.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#AdaptiveLearningPath -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#AdaptiveLearningPath">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningPath"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Advanced -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Advanced">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#SkillLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Assessment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Assessment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#AsynchronousProgramming -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#AsynchronousProgramming">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Beginner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Beginner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#SkillLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Chatbot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Chatbot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeEditor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeEditor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeImprovementFeedback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeImprovementFeedback">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Feedback"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodingExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodingExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CoreJavaScript -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CoreJavaScript">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CorrectAnswerFeedback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CorrectAnswerFeedback">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Feedback"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#DOMManipulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#DOMManipulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Documentation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Documentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#EventHandling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#EventHandling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Feedback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Feedback"/>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#FixedLearningPath -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#FixedLearningPath">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningPath"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#IncorrectAnswerFeedback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#IncorrectAnswerFeedback">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Feedback"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Instructor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Instructor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveTool"/>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Intermediate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Intermediate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#SkillLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#JavaScript -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#JavaScript">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#ProgrammingLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Learner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Learner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningPath -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningPath"/>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#ProgrammingLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#ProgrammingLanguage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Project -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Project">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Quiz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Quiz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#SkillLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#SkillLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Tutorial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Tutorial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#User"/>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Video -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Video">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Advanced -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Advanced">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#SkillLevel"/>
+        <JavaScript:levelName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced</JavaScript:levelName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#AsynchronousProgramming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#AsynchronousProgramming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+        <JavaScript:hasPrerequisite rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CoreJavaScript"/>
+        <JavaScript:hasPrerequisite rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#DOMManipulation"/>
+        <JavaScript:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asynchronous Programming in JavaScript</JavaScript:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Beginner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Beginner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#SkillLevel"/>
+        <JavaScript:levelName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</JavaScript:levelName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#ChatBot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#ChatBot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveTool"/>
+        <JavaScript:toolName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jarvis</JavaScript:toolName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeEditor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeEditor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveTool"/>
+        <JavaScript:toolName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Visual Studio Code</JavaScript:toolName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeImprovementFeedback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeImprovementFeedback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Feedback"/>
+        <JavaScript:hasFeedback rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeImprovementFeedback"/>
+        <JavaScript:content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Your code is almost there. Make sure to check for semicolons at the end of statements.</JavaScript:content>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CoreJavaScript -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CoreJavaScript">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+        <JavaScript:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core JavaScript Concepts</JavaScript:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CorrectAnswerFeedback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CorrectAnswerFeedback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Feedback"/>
+        <JavaScript:hasFeedback rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CorrectAnswerFeedback"/>
+        <JavaScript:content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Excellent! Your answer is correct.</JavaScript:content>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#DOMManipulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#DOMManipulation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+        <JavaScript:hasPrerequisite rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CoreJavaScript"/>
+        <JavaScript:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Document Object Model Manipulation</JavaScript:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#EventHandling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#EventHandling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Topic"/>
+        <JavaScript:hasPrerequisite rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#AsynchronousProgramming"/>
+        <JavaScript:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event Handling in JavaScript</JavaScript:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#IncorrectAnswerFeedback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#IncorrectAnswerFeedback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Feedback"/>
+        <JavaScript:hasFeedback rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#IncorrectAnswerFeedback"/>
+        <JavaScript:content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Try again. The correct answer is 10.</JavaScript:content>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Intermediate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Intermediate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#SkillLevel"/>
+        <JavaScript:levelName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</JavaScript:levelName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#JavaScript -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#JavaScript">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#ProgrammingLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Learner_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Learner_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#User"/>
+        <JavaScript:completes rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Tutorial_1:_Introduction_to_JavaScript"/>
+        <JavaScript:tracksProgress rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#IncorrectAnswerFeedback"/>
+        <JavaScript:tracksProgress rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Document_1:_JavaScript_Documentation"/>
+        <JavaScript:tracksProgress rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Project_1:_Build_a_Simple_To-do_List_with_JavaScript"/>
+        <JavaScript:tracksProgress rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Quiz:_&apos;JavaScript_Basics_Quiz&apos;"/>
+        <JavaScript:tracksProgress rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Tutorial_1:_Introduction_to_JavaScript"/>
+        <JavaScript:tracksProgress rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Video1:_JavaScript_for_Beginners"/>
+        <JavaScript:username rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Afrash</JavaScript:username>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Learner_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Learner_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#User"/>
+        <JavaScript:completes rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Quiz:_&apos;JavaScript_Basics_Quiz&apos;"/>
+        <JavaScript:completes rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Tutorial_1:_Introduction_to_JavaScript"/>
+        <JavaScript:hasFeedback rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CorrectAnswerFeedback"/>
+        <JavaScript:tracksProgress rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Quiz:_&apos;JavaScript_Basics_Quiz&apos;"/>
+        <JavaScript:tracksProgress rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Tutorial_1:_Introduction_to_JavaScript"/>
+        <JavaScript:username rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apurv</JavaScript:username>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Lecturer_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Lecturer_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#User"/>
+        <JavaScript:username rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel</JavaScript:username>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Lecturer_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Lecturer_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#User"/>
+        <JavaScript:username rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rachel</JavaScript:username>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#AdaptiveLearningPath:_&apos;JavaScript_Beginner_Path&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#AdaptiveLearningPath:_&apos;JavaScript_Beginner_Path&apos;">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningPath"/>
+        <JavaScript:pathName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JavaScript Beginner Path</JavaScript:pathName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodingExercise:_&apos;Write_a_JavaScript_function_to_calculate_the_sum_of_two_numbers&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodingExercise:_&apos;Write_a_JavaScript_function_to_calculate_the_sum_of_two_numbers&apos;">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Assessment"/>
+        <JavaScript:hasPrerequisite rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeImprovementFeedback"/>
+        <JavaScript:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Write a function that takes two numbers as arguments and returns their sum.</JavaScript:question>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Document_1:_JavaScript_Documentation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Document_1:_JavaScript_Documentation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <JavaScript:coversSkillLevel rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Beginner"/>
+        <JavaScript:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JavaScript Documentation</JavaScript:title>
+        <JavaScript:url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://developer.mozilla.org/en-US/docs/Web/JavaScript</JavaScript:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#FixedLearningPath:_&apos;JavaScript_Intermediate_Path&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#FixedLearningPath:_&apos;JavaScript_Intermediate_Path&apos;">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningPath"/>
+        <JavaScript:pathName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JavaScript Intermediate Path</JavaScript:pathName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveExercise_1:_JavaScript_Coding_Challenge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveExercise_1:_JavaScript_Coding_Challenge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <JavaScript:coversSkillLevel rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Beginner"/>
+        <JavaScript:hasPrerequisite rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#InteractiveExercise_1:_JavaScript_Coding_Challenge"/>
+        <JavaScript:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JavaScript Coding Challenge</JavaScript:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Project_1:_Build_a_Simple_To-do_List_with_JavaScript -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Project_1:_Build_a_Simple_To-do_List_with_JavaScript">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <JavaScript:coversSkillLevel rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Beginner"/>
+        <JavaScript:usesInteractiveTool rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeEditor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Quiz:_&apos;JavaScript_Basics_Quiz&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Quiz:_&apos;JavaScript_Basics_Quiz&apos;">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Assessment"/>
+        <JavaScript:hasPrerequisite rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CorrectAnswerFeedback"/>
+        <JavaScript:hasPrerequisite rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#IncorrectAnswerFeedback"/>
+        <JavaScript:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">var myVariable = &apos;Hello, world!&apos;</JavaScript:answer>
+        <JavaScript:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the correct syntax for declaring a variable in JavaScript?</JavaScript:question>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Tutorial_1:_Introduction_to_JavaScript -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Tutorial_1:_Introduction_to_JavaScript">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <JavaScript:belongsToLearningPath rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#AdaptiveLearningPath:_&apos;JavaScript_Beginner_Path&apos;"/>
+        <JavaScript:coversSkillLevel rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Beginner"/>
+        <JavaScript:hasPrerequisite rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeEditor"/>
+        <JavaScript:usesInteractiveTool rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#CodeEditor"/>
+        <JavaScript:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to JavaScript</JavaScript:title>
+        <JavaScript:url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://developer.mozilla.org/en-US/docs/Web/JavaScript</JavaScript:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Video1:_JavaScript_for_Beginners -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Video1:_JavaScript_for_Beginners">
+        <rdf:type rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#LearningResource"/>
+        <JavaScript:belongsToLearningPath rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#AdaptiveLearningPath:_&apos;JavaScript_Beginner_Path&apos;"/>
+        <JavaScript:coversSkillLevel rdf:resource="http://www.semanticweb.org/afraz/ontologies/2023/11/JavaScript#Beginner"/>
+        <JavaScript:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JavaScript for Beginners</JavaScript:title>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
